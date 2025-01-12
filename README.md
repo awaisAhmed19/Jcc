@@ -1,16 +1,16 @@
-Java Compiler Project
-This is a simple compiler implementation written in Java. The compiler reads source code, performs lexical analysis, parses the code, and generates intermediate code or an output in the target language. The goal is to understand the workings of a compiler, focusing on lexical analysis, syntax analysis, and code generation.
+# Java Compiler Project
 
-Features
-Lexical Analysis: Tokenizes the input source code into meaningful components.
-Syntax Analysis: Builds a syntax tree by parsing the tokens.
-Intermediate Code Generation: Generates a simplified version of the target language or intermediate code.
-Error Handling: Captures syntax and lexical errors.
-Structure
-The compiler is structured as follows:
+This is a simple **compiler** implementation written in **Java**. The compiler reads source code, performs lexical analysis, parses the code, and generates intermediate code or an output in the target language. The goal is to understand the workings of a compiler, focusing on **lexical analysis**, **syntax analysis**, and **code generation**.
 
-vbnet
-Copy code
+## Features
+
+- **Lexical Analysis**: Tokenizes the input source code into meaningful components.
+- **Syntax Analysis**: Builds a syntax tree by parsing the tokens.
+- **Intermediate Code Generation**: Generates a simplified version of the target language or intermediate code.
+- **Error Handling**: Captures syntax and lexical errors.
+
+## Structure
+```
 /src
   /tokenizer
     Token.java           - Token class for lexical analysis
@@ -25,53 +25,70 @@ Copy code
   ErrorHandler.java     - Handles error reporting
 /Makefile                - Build automation for the project
 README.md               - Project documentation
-Key Classes
-Token: Represents the building blocks of the source code (keywords, identifiers, operators, etc.).
-Tokenizer: Converts the raw input source code into tokens.
-Parser: Converts the list of tokens into a parse tree (abstract syntax tree).
-CodeGenerator: Converts the parse tree into intermediate code or a target language representation.
-Requirements
-Java Development Kit (JDK) 8 or higher
-Text editor or IDE (e.g., IntelliJ IDEA, Eclipse, VS Code)
-Setup
-Clone the repository:
-bash
-Copy code
+```
+
+### Key Classes
+
+- **Token**: Represents the building blocks of the source code (keywords, identifiers, operators, etc.).
+- **Tokenizer**: Converts the raw input source code into tokens.
+- **Parser**: Converts the list of tokens into a parse tree (abstract syntax tree).
+- **CodeGenerator**: Converts the parse tree into intermediate code or a target language representation.
+
+## Requirements
+
+- Java Development Kit (JDK) 8 or higher
+- Text editor or IDE (e.g., IntelliJ IDEA, Eclipse, VS Code)
+
+## Setup
+
+### Clone the repository:
+
+```bash
 git clone https://github.com/yourusername/compiler-project.git
 cd compiler-project
-Compile the source code:
+```
+### Compile the source code:
 You can use the Makefile to build the project (if make is installed) or manually compile using javac.
 
-Using Makefile:
+### Using Makefile:
 
-bash
-Copy code
+```
 make
-Manually:
+```
 
-bash
+### Manually:
+
+```bash
 Copy code
 javac -d bin src/*.java
-Run the Compiler:
-bash
+```
+
+### Run the Compiler:
+```bash
 Copy code
 java Compiler <source-file>
+```
 Where <source-file> is the path to the source code file you want to compile.
 
-How it Works
-Lexical Analysis (Tokenizer):
+## How it Works
+1. Lexical Analysis (Tokenizer):
 
-The compiler reads the source code file line by line and splits it into tokens using the Tokenizer class.
-Each token is categorized into types (keywords, identifiers, operators, etc.).
-Parsing:
+- The compiler reads the source code file line by line and splits it into tokens using the Tokenizer class.
+- Each token is categorized into types (keywords, identifiers, operators, etc.).
 
-After tokenization, the Parser class takes over. It reads the sequence of tokens and creates a syntax tree or Abstract Syntax Tree (AST).
-Code Generation:
+2. Parsing:
 
-Once the syntax tree is built, the CodeGenerator class converts it into a target format (could be machine code, bytecode, or an intermediate representation).
-Error Handling:
+- After tokenization, the Parser class takes over. It reads the sequence of tokens and creates a syntax tree or Abstract Syntax Tree (AST).
 
-If there are any errors in the input (syntax errors or invalid tokens), the ErrorHandler class will catch them and report helpful error messages.
-How to Contribute
-Fork the repository and make a pull request with your changes.
-Submit issues for any bugs or suggestions.
+3. Code Generation:
+
+- Once the syntax tree is built, the CodeGenerator class converts it into a target format (could be machine code, bytecode, or an intermediate representation).
+
+4. Error Handling:
+
+- If there are any errors in the input (syntax errors or invalid tokens), the ErrorHandler class will catch them and report helpful error messages.
+
+
+## How to Contribute
+- Fork the repository and make a pull request with your changes.
+- Submit issues for any bugs or suggestions.
