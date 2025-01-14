@@ -1,2 +1,7 @@
-Numerous data structures are available for implementing tables. Trees, linear lists and self-organizing lists can all be used to implement a symbol table. The symbol table is accessed by most phases of a compiler, beginning with lexical analysis, and continuing through optimization.
+#include <stdio.h>
 
+int main() {
+    // Print Hello, World! to the console
+    printf("Hello, World!\n");
+    return 0;
+}

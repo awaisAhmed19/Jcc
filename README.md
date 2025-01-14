@@ -43,8 +43,8 @@ README.md               - Project documentation
 ### Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/compiler-project.git
-cd compiler-project
+git clone https://github.com/awaisAhmed19/Jcc.git
+cd Jcc
 ```
 ### Compile the source code:
 You can use the Makefile to build the project (if make is installed) or manually compile using javac.
@@ -58,13 +58,11 @@ make
 ### Manually:
 
 ```bash
-Copy code
 javac -d bin src/*.java
 ```
 
 ### Run the Compiler:
 ```bash
-Copy code
 java Compiler <source-file>
 ```
 Where <source-file> is the path to the source code file you want to compile.

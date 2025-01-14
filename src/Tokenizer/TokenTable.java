@@ -1,5 +1,6 @@
-final public class Tokenizer{
-    final public String[] Keywords={
+package Tokenizer; 
+public class TokenTable{
+    public String[] Keywords={
       "int",
       "short",
       "long",
@@ -12,14 +13,14 @@ final public class Tokenizer{
       "True",
       "False",
       "if",
-      "elseif"
+      "elseif",
       "else",
       "for",
       "while",
       "fun"
-    }
+    };
 
-    final public String[] Operator={
+    public String[] Operators={
       "-",
       "+",
       "=",
@@ -34,9 +35,9 @@ final public class Tokenizer{
       "==",
       "!=",
       "."
-    }
+    };
 
-    final public String[] Delimitors={
+    public String[] Delimeters={
       "(",
       ")",
       "{",
@@ -46,5 +47,5 @@ final public class Tokenizer{
       ";",
       ",",
       ".",
-    }
+    };
 }

@@ -1,39 +1,38 @@
 import java.util.*;
 import java.io.*;
-
+import Tokenizer.Tokenizer; 
 class fileReader{
   
   private String FileName;
-  private HashMap <String,String> FileData;
+  public ArrayList<String> FileData;
   
 
   fileReader(String FileName){
     this.FileName=FileName;
-    this.FileData=new HashMap<String, String>();  
+    this.FileData=new ArrayList<String>();  
   }
   
   void read(){
-    try{
-      File file=new File(this.FileName);
-      Scanner RFile=new Scanner(file);
-      while(RFile.hasNextLine()){
-        FileData.add(RFile.nextLine());
+      //StringBuilder RFile=new StringBuilder();
+    try(BufferedReader reader =new BufferedReader(new FileReader(this.FileName))){
+      String Line;
+      while((Line=reader.readLine())!=null){
+        FileData.add(Line);
       }
-      RFile.close();
     }
-    catch(FileNotFoundException e){
+    catch(IOException e){
       System.out.println("An error occurred");
       e.printStackTrace();
     }
   }
 
-  void display(){
+  void display(ArrayList<String> FileData){
     if (FileData.isEmpty()){
       System.out.println("Error, nothing here");
     }
     else{
-      for (String Data : FileData) {
-        System.out.println(Data);
+      for (String Tokens :FileData) {
+        System.out.println(Tokens);
       }
     }
   }
@@ -42,7 +41,14 @@ class fileReader{
 public class jcc{
   public static void main(String args []){
     fileReader R=new fileReader("Test.txt");
+    Map<String,String> Result=new HashMap<String,String>();
+    Tokenizer Tk=new Tokenizer();
+//TODO: make a string breaker
     R.read();
-    R.display();
+    Result=Tk.tokenize(R.FileData);
+    for (Map.Entry<String ,String > Tokens :Result.entrySet()) {
+      System.out.println(Tokens.getKey()+":"+Tokens.getValue());
+    }
+    R.display(R.FileData);
   }
 }
