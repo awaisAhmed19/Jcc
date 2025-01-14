@@ -37,7 +37,6 @@ README.md               - Project documentation
 ## Requirements
 
 - Java Development Kit (JDK) 8 or higher
-- Text editor or IDE (e.g., IntelliJ IDEA, Eclipse, VS Code)
 
 ## Setup
 

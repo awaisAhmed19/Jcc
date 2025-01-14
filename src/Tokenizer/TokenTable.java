@@ -1,5 +1,5 @@
 final public class Tokenizer{
-    private String[] Keywords={
+    final public String[] Keywords={
       "int",
       "short",
       "long",
@@ -19,7 +19,7 @@ final public class Tokenizer{
       "fun"
     }
 
-    private String[] Operator={
+    final public String[] Operator={
       "-",
       "+",
       "=",
@@ -36,7 +36,7 @@ final public class Tokenizer{
       "."
     }
 
-    private String[] Delimitors={
+    final public String[] Delimitors={
       "(",
       ")",
       "{",

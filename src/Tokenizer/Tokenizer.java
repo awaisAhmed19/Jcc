@@ -1,53 +1,6 @@
 import java.util.*;
-final public class Tokenizer{
-    private String[] Keywords={
-      "int",
-      "short",
-      "long",
-      "static",
-      "char",
-      "string",
-      "float",
-      "double",
-      "return",
-      "True",
-      "False",
-      "if",
-      "elseif"
-      "else",
-      "for",
-      "while",
-      "fun"
-    }
-
-    private String[] Operator={
-      "-",
-      "+",
-      "=",
-      "^",
-      "*",
-      "%",
-      "!",
-      "<",
-      ">",
-      "=>",
-      "<=",
-      "==",
-      "!=",
-      "."
-    }
-
-    private String[] Delimiters={
-      "(",
-      ")",
-      "{",
-      "}",
-      "[",
-      "]",
-      ";",
-      ",",
-      ".",
-    }
+import TokenTable;
+final public class Tokenizer extends TokenTable{
       
     private static boolean isIdentifier(String iden){
       return iden.matches("[a-zA-Z_][a-zA-Z0-9_]*");
